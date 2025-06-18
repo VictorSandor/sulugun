@@ -58,7 +58,7 @@ RewriteRule ^syr-kopchena-solomka-naturalna-0-2gr$ /novyj-asortyment-novynka/syr
 RewriteRule ^sitemap\.xml$ index.php?route=feed/google_sitemap [L,QSA]
 
 # Редірект з index.php на головну
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php(?:\s|\?) [NC]
+RewriteCond %{THE_REQUEST} ^GET\s/index\.php [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
 # Переадресация /blog на blog.html
