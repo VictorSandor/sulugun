@@ -37,7 +37,11 @@ body {
 }
 
 #google_translate_element {
-    margin: 10px auto;
+    /* margin: 10px auto; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     text-align: center;
     /*background-color: #f0f0f0; /* Светло-серый фон */
@@ -89,20 +93,23 @@ body {
     /* Легкая тень */
 }
 
+/* .shippingmob {
+    font-size: 9px;
+
+    display: inline-block;
+} */
+
 .shippingmob {
     display: none;
+    /* по умолчанию скрыт */
     font-size: 9px;
 }
 
+/* Показывать только на мобильных (до 768px) */
 @media (max-width: 767.98px) {
     .shippingmob {
         display: inline-block;
     }
-}
-
-.delivery-text {
-    color: #e1306c;
-    font-weight: 700;
 }
 
 .goog-te-combo {
@@ -571,7 +578,7 @@ label {
 
 /* 2. header */
 .header-area {
-    margin-bottom: -148px;
+    margin-bottom: -178px;
 }
 
 .header-top {
@@ -950,6 +957,11 @@ label {
     left: -20px;
 
 }
+
+/* .slider-content {
+    position: relative;
+    z-index: 2;
+} */
 
 .slider-content {
     position: absolute;
@@ -1406,7 +1418,6 @@ label {
 
 .breadcrumb-title h2 {
     font-size: 48px;
-    margin-bottom: 25px;
     line-height: 1;
 }
 
@@ -5267,6 +5278,18 @@ section:hover .section-title h2::before {
 .bsingle__post-thumb img {
     width: 100%;
     height: auto;
+}
+
+.bsingle__post-thumbblog img {
+    width: 100%;
+    /* или конкретно, например 300px */
+    height: auto;
+    /* чтобы сохранялись пропорції */
+    max-width: 600px;
+    /* ограничение по ширине */
+    display: block;
+    margin: 0 auto;
+    /* чтобы центрировать */
 }
 
 .bsingle__post .video-p {
@@ -11753,29 +11776,34 @@ div.single-cta:last-child {
     border-radius: 50% !important;
 }
 
+.delivery-link {
+    margin-right: 5px;
+    /* трохи відступу між посиланнями */
+    text-decoration: none;
+    color: #e1306c;
+    /* або задайте конкретний колір */
+}
+
 .logo-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 0;
-  top: 0;
-  left: 0;
-  z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    z-index: 11;
 }
 
-/* Общие стили логотипа */
+/* Общий стиль логотипа */
 .logoS {
-  position: absolute;
-  width: 240px;
-  height: auto;
+    width: 240px;
+    height: auto;
+    /* position: absolute; */
 }
 
-/* Ваши диапазоны */
-
-@media (min-width: 768px) and (max-width: 1002px) {
-  .logoS {
-    top: 190px;
-    left: 650px;
-  }
+/* Точное позиционирование под ваш запрос */
+@media (min-width: 768px) and (max-width: 1001px) {
+    .logoS {
+        top: 190px;
+        left: 650px;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1450px) {
@@ -11784,6 +11812,8 @@ div.single-cta:last-child {
         margin-left: 190px;
     }
 }
+
+
 
 @media (min-width: 1440px) and (max-width: 2559px) {
     .logoS {
@@ -11799,19 +11829,72 @@ div.single-cta:last-child {
     }
 }
 
-/* Мобильные и fallback */
 @media (max-width: 767.98px) {
-  .logoS {
-    position: relative;
-    margin: 40px auto 0;
-    left: 0;
-    top: 0;
-  }
+    .logoS {
+        position: relative;
+        margin: 40px auto 0;
+        left: 0;
+        top: 0;
+    }
 }
 
+/* .logoS {
+    width: 240px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 190px;
+}
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .logoS {
+        margin-left: 78px;
+        margin-top: 130px;
+    }
+}
 
-.logo a {
+@media (min-width: 901px) and (max-width: 991.98px) {
+    .logoS {
+        margin-left: 600px;
+        margin-top: 150px;
+        width: 240px;
+        height: auto;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900.98px) {
+    .logoS {
+        margin-left: 500px;
+        margin-top: 190px;
+        width: 240px;
+        height: auto;
+
+    }
+} */
+
+.delivery-text {
+    color: #e1306c;
+    font-weight: 700;
+
+}
+
+/* position: fixed;
+/* фиксируем в углу */
+bottom: 0;
+/* снизу */
+left: 0;
+/* слева */
+writing-mode: vertical-rl;
+/* вертикальный текст снизу вверх */
+transform: rotate(180deg);
+/* переворачиваем, чтобы читать снизу вверх */
+font-weight: bold;
+color: #e1306c;
+padding: 10px;
+font-size: 16px;
+z-index: 999;
+
+*/ .logo a {
     color: #000;
     padding: 0;
     margin: 0;
@@ -12102,4 +12185,289 @@ blockquote a:hover {
     .d-flex.d-md-none {
         display: none !important;
     }
+}
+
+
+.fixed-icons {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    z-index: 9999;
+}
+
+
+.fixed-icons-right {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.fixed-icons a img {
+    width: 45px;
+    height: 45px;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-icons a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    /* тінь для читабельності */
+}
+
+
+.mobile-only {
+    display: none !important;
+}
+
+@media (max-width: 1023px) {
+    .mobile-only {
+        display: inline-block !important;
+    }
+}
+
+.zeroee {
+    visibility: hidden;
+}
+
+#pc-slider .single-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+#pc-slider .active-slide {
+    opacity: 1;
+    z-index: 2;
+}
+
+.logoS {
+    max-width: 150px;
+    height: auto;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #laptop-slider {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    #laptop-slider .single-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+    }
+
+    #laptop-slider .active-slide {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    #laptop-slider .logoS {
+        max-width: 150px;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #tablet-slider {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    #tablet-slider .single-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+    }
+
+    #tablet-slider .active-slide {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    #tablet-slider .logoS {
+        max-width: 130px;
+        height: auto;
+    }
+
+    #tablet-slider .slider-content {
+        text-align: left;
+        padding-top: 50px;
+        color: #fff;
+    }
+
+    #tablet-slider .btn {
+        background-color: #49535d;
+        color: #50C878;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    #tablet-slider .btn:hover {
+        background-color: #3ea860;
+    }
+}
+
+/* кастомна видимість для ширини 500–768px */
+/* @media (min-width: 500px) and (max-width: 767.98px) {
+    .d-custom-flex {
+        display: flex !important;
+    }
+
+    #mobile-slider {
+        height: 450px;
+        position: relative;
+    }
+
+    #mobile-slider .single-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+    }
+
+    #mobile-slider .active-slide {
+        opacity: 1;
+        z-index: 2;
+    }
+} */
+
+
+/* @media (max-width: 767.98px) {
+    #mobile-slider {
+        height: 450px;
+        position: relative;
+    }
+
+    #mobile-slider .single-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+        display: none;
+        align-items: center;
+    }
+
+    #mobile-slider .active-slide {
+        display: flex;
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .slider-content {
+        text-align: center;
+        color: white;
+    }
+
+    .btn.ss-btn {
+        background-color: #50C878;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .btn.ss-btn:hover {
+        background-color: #3ea860;
+    }
+} */
+
+#mobile-slider .single-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+#mobile-slider .single-slider.active-slide {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.video-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.video-caption {
+    background-color: #2c2c2c;
+    color: white;
+    /* щоб текст був видимим */
+    padding: 10px 15px;
+    /* внутрішній відступ */
+    width: 100%;
+    /* щоб фон підганявся під довжину тексту */
+}
+
+.nowrap {
+    white-space: nowrap;
 }
