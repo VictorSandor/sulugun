@@ -129,6 +129,8 @@
   <!-- header -->
   <header class="header-area">
 
+
+
     <div id="header-sticky" class="menu-area">
       <div class="container">
         <div class="second-menu">
@@ -389,25 +391,25 @@
             </a>
           </div>
 
-          <div class="container" style="position: relative; z-index: 10;">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-7">
-                <div class="slider-content">
-                  <div class="slider-btn mt-30">
-                    <a href="#services" class="btn ss-btn active mr-15 smoth-scroll">
-                      Наша продукція <i class="fal fa-long-arrow-right"></i>
-                    </a>
-                  </div>
-                  <div class="slider-btn mt-30">
-                    <a href="#about" class="btn ss-btn active mr-15 smoth-scroll">
-                      Чому саме ми? <i class="fal fa-long-arrow-right"></i>
-                    </a>
-                  </div>
+
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-7">
+              <div class="slider-content">
+                <div class="slider-btn mt-30">
+                  <a href="#services" class="btn ss-btn active mr-15 smoth-scroll">
+                    Наша продукція <i class="fal fa-long-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="slider-btn mt-30">
+                  <a href="#about" class="btn ss-btn active mr-15 smoth-scroll">
+                    Чому саме ми? <i class="fal fa-long-arrow-right"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-md-5"></div>
             </div>
+            <div class="col-md-5"></div>
           </div>
+
         </div>
 
         <script>
@@ -444,22 +446,7 @@
           <!-- Слайд 1 -->
           <div class="single-slider slider-bg active-slide"
             style="background-image: url('img/slider/Slider1777tablet.jpg'); background-size: cover; background-position: center;">
-            <div class="container">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-12">
-                  <div class="slider-content s-slider-content mt-60">
-                    <div class="slider-btn-group d-flex mt-30">
-                      <a href="#services" class="btn ss-btn active mr-15 smoth-scroll">Продукція
-                        <i class="fal fa-long-arrow-right"></i>
-                      </a>
-                      <a href="#about" class="btn ss-btn active smoth-scroll">Про нас
-                        <i class="fal fa-long-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
           <!-- Слайд 4 -->
           <div class="single-slider slider-bg"
@@ -476,6 +463,24 @@
           <!-- Слайд 7 -->
           <div class="single-slider slider-bg"
             style="background-image: url('img/slider/6.jpg'); background-size: cover; background-position: center;">
+          </div>
+
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-7">
+              <div class="slider-content">
+                <div class="slider-btn mt-30">
+                  <a href="#services" class="btn ss-btn active mr-15 smoth-scroll">
+                    Наша продукція <i class="fal fa-long-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="slider-btn mt-30">
+                  <a href="#about" class="btn ss-btn active mr-15 smoth-scroll">
+                    Чому саме ми? <i class="fal fa-long-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5"></div>
           </div>
 
 
